@@ -1,0 +1,23 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="refresh" content="300000">{{/* Refresh every 5 minutes */}}
+	<title>Document</title>
+</head>
+
+<body>
+	<p>Keep this page open, this will send image updates to reddit</p>
+	<script>
+		setInterval(() => {
+			window.parent.postMessage({
+				design: "test"
+			}, '*')
+			console.log("sending...")
+		}, 1000)
+	</script>
+</body>
+
+</html>
